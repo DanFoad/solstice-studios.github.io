@@ -2,78 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Solstice Studios</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+
 </head>
 
-<body style="zoom: 1;">
-    <!--<div class="main">
-        <section>-->
-    <div id="foreground" class="outer">
-        <div class="inner">Solstice Studios</div>
-    </div>
-    <div id="background">
-        <div class="star" data-parallaxify-range="300"></div>
-    </div>
-    <!--</section>
-        <section>
-            <h1>hey</h1>
-        </section>
-        <section>
-            <h1>hey</h1>
-        </section>
-        <section>
-            <h1>hey</h1>
-        </section>
-    </div>-->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/scroll.js"></script>
+<body>
     <script>
-        $(function () {
-            $(document).ready(function () {
-                var i,
-                    size,
-                    color,
-                    width = $(window).width(),
-                    height = $(window).height();
-
-                for (i = 1; i <= 150; i++) {
-                    size = Math.ceil(3 * Math.random());
-                    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(100 * Math.random()) + '" style="top: ' + Math.round(height * Math.random()) + 'px; left: ' + Math.round(width * Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
-                }
-
-                for (i = 1; i <= 30; i++) {
-                    size = Math.ceil(5 * Math.random()) + 2;
-                    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(400 * Math.random()) + '" style="top: ' + Math.round(height * Math.random()) + 'px; left: ' + Math.round(width * Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
-                }
-
-                for (i = 1; i <= 20; i++) {
-                    size = Math.ceil(10 * Math.random()) + 5;
-                    color = 'rgba(' + Math.round(256 * Math.random()) + ', ' + Math.round(256 * Math.random()) + ', ' + Math.round(256 * Math.random()) + ', ' + (Math.round(100 * Math.random()) / 100) + ')';
-                    $('#background').append('<div class="star" data-parallaxify-range="' + Math.round(600 * Math.random()) + '" style="top: ' + Math.round(height * Math.random()) + 'px; left: ' + Math.round(width * Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px; background: ' + color + '; box-shadow: 0px 0px 10px ' + color + ';"></div>');
-                }
-
-                $.parallaxify({
-                    positionProperty: 'transform',
-                    responsive: true,
-                    motionType: 'natural',
-                    mouseMotionType: 'gaussian',
-                    motionAngleX: 80,
-                    motionAngleY: 80,
-                    alphaFilter: 0.5,
-                    adjustBasePosition: true,
-                    alphaPosition: 0.025,
-                });
-                /*                $(".main").onepage_scroll({
-                                    sectionContainer: "section",
-                                    responsiveFallback: 600,
-                                });*/
-            });
-        });
+        wow = new WOW({
+            boxClass: 'wow', // 
+            animateClass: 'animated', // 
+            offset: 0, // 
+            mobile: false, // 
+            live: true // 
+        })
+        wow.init();
     </script>
+
+
+    <header id="top" class="topbar_active">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <strong>Solstice Studios<sub class="navbar-brand-sub"> Web Dev</sub></strong>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active blacknav"><a href="#home" title="Home">Home</a></li>
+                    <li><a href="#about" title="About">About</a></li>
+                    <li><a href="#services" title="Services">Our Services</a></li>
+                    <li><a href="#works" title="Works">Works</a></li>
+                    <li><a href="#contact" title="Contact">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <div id="home" class="home hidden-xs hidden-sm">
+        <div class="text-vcenter wow zoomIn">
+            <h1 style="color:#fff;">Solstice Studios</h1></div>
+        <a href="#services">
+
+            <div class="scroll-down">
+                <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+            </div>
+        </a>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <h1 data-wow-delay="1s" class="text-center wow fadeInUp">What we do</h1></div>
+            <hr>
+            <div class="row text-center">
+                <div data-wow-delay="1.3s" class="wow fadeInLeft">
+                    <div class="col-md-3">
+                        <div id="shadow" class="panel panel-default hvr-float-shadow">
+                            <div class="panel-body">
+                                <i class="fa fa-desktop fa-2x"></i>
+                                <h3>Web Design</h3>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor est augue, quis dignissim tortor dictum in. Donec a vulputate libero, et convallis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis lectus nisi. Maecenas nec ante facilisis, venenatis nisi quis, fermentum lectus. Maecenas</h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div id="shadow" class="panel panel-default hvr-float-shadow">
+                            <div class="panel-body">
+                                <i class="fa fa-code fa-2x"></i>
+                                <h3>Web Development</h3>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor est augue, quis dignissim tortor dictum in. Donec a vulputate libero, et convallis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis lectus nisi. Maecenas nec ante facilisis, venenatis nisi quis, fermentum lectus. Maecenas</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-wow-delay="1.3s" class="wow fadeInRight">
+                    <div class="col-md-3">
+                        <div id="shadow" class="panel panel-default hvr-float-shadow">
+                            <div class="panel-body">
+                                <i class="fa fa-thumbs-o-up fa-2x"></i>
+                                <h3>Branding</h3>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor est augue, quis dignissim tortor dictum in. Donec a vulputate libero, et convallis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis lectus nisi. Maecenas nec ante facilisis, venenatis nisi quis, fermentum lectus. Maecenas</h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div id="shadow" class="panel panel-default hvr-float-shadow">
+                            <div class="panel-body">
+                                <i class="fa fa-share-square-o fa-2x"></i>
+                                <h3>Social Media</h3>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor est augue, quis dignissim tortor dictum in. Donec a vulputate libero, et convallis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis lectus nisi. Maecenas nec ante facilisis, venenatis nisi quis, fermentum lectus. Maecenas</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+                <div class="col-md-4"><img class="img-responsive img-size" src="http://placehold.it/350x150">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
 </body>
 
 </html>
