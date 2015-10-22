@@ -63,6 +63,10 @@ body {
     padding-bottom: 50px;
 }
 
+#services i.fa {
+    color: #314C67;
+}
+
 
 /* ---------------------------------------------- /*
  *Scroll Down
@@ -180,16 +184,24 @@ header#top nav {
 }
 
 header#top nav .navbar-brand {
-    font-size: 15px;
+    font-size: 24px;
     letter-spacing: 0;
     color: #fff;
     background: 10px center transparent no-repeat;
     margin-left: 65px !important;
+    text-transform: lowercase;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    height: 52px;
+    padding-top: 8px;
 }
 
 header#top nav .navbar-brand-sub {
-    color: #ffffff;
+    color: #888888;
     font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .topbar_active .navbar-brand {
@@ -197,7 +209,7 @@ header#top nav .navbar-brand-sub {
 }
 
 .topbar_active .navbar-brand-sub {
-    color: #909090 !important;
+    color: #888888 !important;
 }
 
 header#top nav ul {
@@ -214,7 +226,8 @@ header#top nav ul li a {
 }
 
 header#top nav ul li a:hover {
-    color: #f7f7f7;
+    color: #E0E0E0;
+    border-bottom: 2px solid #517EAD;
 }
 
 .topbar_active nav ul li a:hover {
@@ -239,6 +252,7 @@ header#top nav a {
 header#top nav li.active > a {
     background: transparent;
     color: #ffffff;
+    border-bottom: 2px solid #517EAD;
 }
 
 header#top nav li.active > a:hover {
@@ -366,8 +380,8 @@ label {
     height: 10px;
     width: 90%;
     opacity: 0;
-    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
     /* W3C */
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
